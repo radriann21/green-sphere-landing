@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@theme {
+  --color-main-bg: #fff;
+  --color-accent-color: #116D62;
+  --color-main-text: #111827;
+  --color-normal-text: #9BA4B7;
+
+  --font-headings: "Poppins", sans-serif;
+}
