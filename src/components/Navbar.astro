@@ -1,0 +1,100 @@
+---
+const navOptions = ["Landing", "Gallery", "Contact", "About"];
+---
+
+<header class="lg:m-4 flex items-center justify-between relative">
+  <div class="font-semibold font-headings text-accent-color text-3xl z-20">
+    Green Sphere
+  </div>
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex items-center gap-x-8">
+    {
+      navOptions.map((option) => (
+        <li>
+          <a
+            href="#"
+            class="text-normal-text transition-colors duration-300 hover:text-main-text font-semibold"
+          >
+            {option}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <button
+    class="hidden md:block px-6 py-2 rounded-md border-2 border-accent-color text-accent-color font-headings cursor-pointer transition-all duration-300 hover:bg-accent-color hover:text-white"
+  >
+    Request a Demo
+  </button>
+  <!-- Mobile Hamburger and Menu (CSS only) -->
+  <input type="checkbox" id="menu-toggle" class="peer hidden" />
+  <label
+    for="menu-toggle"
+    class="md:hidden z-20 p-2 cursor-pointer select-none"
+  >
+    <svg
+      class="w-7 h-7 text-accent-color"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </label>
+  <!-- Overlay -->
+  <label
+    for="menu-toggle"
+    class="fixed inset-0 bg-black/40 z-10 md:hidden opacity-0 pointer-events-none transition-opacity duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto"
+  ></label>
+  <!-- Mobile Menu -->
+  <nav
+    class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg z-30 transform translate-x-full transition-transform duration-300 md:hidden peer-checked:translate-x-0"
+    style="font-family: 'Poppins', sans-serif;"
+  >
+    <div class="flex items-center justify-between p-6 border-b">
+      <span class="font-headings text-accent-color text-2xl font-bold"
+        >Green Sphere</span
+      >
+      <label for="menu-toggle" class="p-2 cursor-pointer">
+        <svg
+          class="w-6 h-6 text-accent-color"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </label>
+    </div>
+    <ul class="flex flex-col gap-y-6 p-6">
+      {
+        navOptions.map((option) => (
+          <li>
+            <a
+              href="#"
+              class="text-main-text text-lg font-semibold block py-2 px-2 rounded hover:bg-accent-color/10 transition-colors duration-200"
+            >
+              {option}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="px-6 pb-6">
+      <button
+        class="w-full px-6 py-2 rounded-md border-2 border-accent-color text-accent-color font-headings cursor-pointer transition-all duration-300 hover:bg-accent-color hover:text-white"
+      >
+        Request a Demo
+      </button>
+    </div>
+  </nav>
+</header>

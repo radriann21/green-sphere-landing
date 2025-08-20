@@ -1,0 +1,32 @@
+---
+import Navbar from "./Navbar.astro";
+---
+
+<section class="max-w-full h-[80vh] p-8">
+  <Navbar />
+  <section class="mt-10 h-full flex items-center">
+    <div class="w-full lg:w-[60%]">
+      <h1
+        class="text-center lg:text-left text-4xl lg:text-6xl font-bold font-headings text-main-text"
+      >
+        Tu hogar ecologico te espera.
+      </h1>
+      <p class="mt-2 w-full text-center lg:w-[70%] text-xl text-normal-text">
+        La casa de tus sueños, bajo una perspectiva sostenible y ecológica.
+      </p>
+      <div class="flex justify-center lg:justify-start">
+        <button
+          class="mt-4 px-4 py-2 rounded-md bg-accent-color text-white font-semibold cursor-pointer transition-all duration-300 hover:bg-accent-color/90"
+        >
+          Contáctanos
+        </button>
+      </div>
+    </div>
+    <div class="-z-10 absolute top-0 right-0 hidden lg:block">
+      <img
+        src="/assets/images/home-img.png"
+        alt="Imagen de una casa ecológica"
+      />
+    </div>
+  </section>
+</section>
