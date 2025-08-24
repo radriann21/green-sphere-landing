@@ -1,0 +1,50 @@
+<section class="mt-20 p-10 flex flex-col items-center justify-center">
+  <article
+    class="p-8 rounded-md flex items-center justify-between bg-accent-color text-white w-[90%] relative gap-x-10"
+  >
+    <img
+      class="absolute top-0 right-0 -z-0"
+      src="/assets/images/book.png"
+      alt="pattern for decoration of the form"
+    />
+    <div class="flex flex-col w-1/2">
+      <h3 class="font-headings text-5xl font-bold">
+        Contacta con nosotros para más información.
+      </h3>
+      <p class="mt-2 text-sm">
+        ¿Necesitas asesoramiento extra? No te preocupes, estamos listos para
+        ayudarte. Puedes llenar el formulario de la derecha para agendar una
+        reunión con nosotros. Totalmente gratis.
+      </p>
+    </div>
+    <div class="p-4 bg-white rounded-md text-black w-1/2 z-20">
+      <h3 class="font-headings text-xl font-bold">Agenda una reunión.</h3>
+      <form class="flex flex-col gap-y-8 mt-4">
+        <input
+          class="p-3 rounded-md w-full bg-[#F3F4F6] placeholder:text-gray-700 text-sm"
+          type="text"
+          placeholder="Coloca tu nombre..."
+        />
+        <input
+          class="p-3 rounded-md w-full bg-[#F3F4F6] placeholder:text-gray-700 text-sm"
+          type="email"
+          placeholder="Coloca tu email..."
+        />
+        <input
+          class="p-3 rounded-md w-full bg-[#F3F4F6] placeholder:text-gray-700 text-sm"
+          type="date"
+          placeholder="Coloca la fecha..."
+        />
+        <select class="text-sm text-gray-700 p-3 rounded-md bg-[#F3F4F6]">
+          <option value="">Tipo de reunión...</option>
+          <option value="consulta">Presencial</option>
+          <option value="seguimiento">Virtual</option>
+        </select>
+        <button
+          class="w-full font-semibold font-headings bg-accent-color text-white p-2 rounded-md cursor-pointer transition-colors duration-300 hover:bg-accent-color/90"
+          >Agendar</button
+        >
+      </form>
+    </div>
+  </article>
+</section>
