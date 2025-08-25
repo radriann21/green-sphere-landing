@@ -1,0 +1,60 @@
+---
+const testimonies = [
+  {
+    userImage: "/assets/images/brooklyn.png",
+    description:
+      "Recomiendo a todos que usen los servicios de Green Sphere. La atención es soberbia y gracias a ello, consiguí mi casa ideal.",
+    name: "Brooklyn Simmons",
+  },
+  {
+    userImage: "/assets/images/alex.png",
+    description:
+      "Green Sphere es el mejor agente inmobiliario que he conocido. Su equipo es profesional y siempre dispuesto a ayudar.",
+    name: "Alex Johnson",
+  },
+  {
+    userImage: "/assets/images/alex.png",
+    description:
+      "Green Sphere es el mejor agente inmobiliario que he conocido. Su equipo es profesional y siempre dispuesto a ayudar.",
+    name: "Alex Johnson",
+  },
+];
+---
+
+<section
+  class="w-full flex flex-col gap-y-8 items-center justify-center mt-20 px-8"
+>
+  <div class="text-center">
+    <h3 class="uppercase text-normal-text text-lg">Testimonios</h3>
+    <p class="font-headings text-2xl font-bold">
+      Lo que las personas dicen de nosotros.
+    </p>
+  </div>
+  <div class="mt-4 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      testimonies.map((testimony) => (
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <img
+            src={testimony.userImage}
+            alt={testimony.name}
+            class="w-16 h-16 rounded-full mb-4"
+          />
+          <div class="flex gap-x-1 mb-4">
+            {[...Array(5)].map(() => (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="w-5 h-5 text-yellow-500"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.4 8.168L12 18.896l-7.334 3.864 1.4-8.168L.132 9.21l8.2-1.192z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-normal-text text-sm mb-4">{testimony.description}</p>
+          <h4 class="font-headings text-lg font-bold">{testimony.name}</h4>
+        </div>
+      ))
+    }
+  </div>
+</section>
